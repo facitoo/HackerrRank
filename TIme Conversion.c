@@ -3,24 +3,24 @@
 int main()
 {
 
-    char time[10];
+    char time[10];     //input time as string
     scanf("%s",time);
-    if(time[2]!=':' || time[5]!=':')
+   /* if(time[2]!=':' || time[5]!=':')           //test section
     {
         printf("invalid input1");
         return 0;
     }
     else if(time[3]>'5' || time[6]>'6')
     {
-       printf("incalid minute or time");
+       printf("invalid minute or time");
        return 0;
     }
     else if(time[0]=='1' && time[1]>'2')
     {
         printf("invalid input 2");
         return 0;
-    }
-    else if(time[8]=='A' || time[8]=='a')
+    }*/                                         //end of test section
+    if(time[8]=='A' || time[8]=='a')        //checking for AM or PM
     {
         if(time[0]=='1' && time[1]=='2')
         {
@@ -51,7 +51,7 @@ int main()
         }
         time[8]='\0';
     }
-    else
+    else            //exception in input
     {
         printf("enter valid input 3");
     }
